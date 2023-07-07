@@ -1,0 +1,1 @@
+# Scripty Tailwind UI (`scriptyTUI`)

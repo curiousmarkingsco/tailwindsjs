@@ -1,0 +1,23 @@
+{
+  "name": "scriptytui",
+  "version": "1.0.0",
+  "description": "An easy way to animate your TailwindUI elements.",
+  "main": "dist/scriptytui.js",
+  "scripts": {
+    "build": "webpack",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "animation",
+    "html",
+    "interactive"
+  ],
+  "author": "Ian Rand McKenzie",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
