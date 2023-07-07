@@ -1,16 +1,16 @@
-document.querySelectorAll('[class*="anim-group-click:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-click:"]').forEach((trigger) => {
   trigger.addEventListener('click', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="anim-group-mouseover:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-mouseover:"]').forEach((trigger) => {
   trigger.addEventListener('mouseover', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="anim-group-mouseout:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-mouseout:"]').forEach((trigger) => {
   trigger.addEventListener('mouseout', () => {
     handleAnimationGroup(trigger);
   });
@@ -19,12 +19,12 @@ document.querySelectorAll('[class*="anim-group-mouseout:"]').forEach((trigger) =
 function handleAnimationGroup(trigger) {
   const groupClass = trigger.className
     .split(' ')
-    .find(name => /anim-group-(click|mouseover|mouseout):/.test(name));
+    .find(name => /group-anim-(click|mouseover|mouseout):/.test(name));
 
-  const groupId = groupClass.split(':')[1]; // remove 'anim-group-[action]:'
+  const groupId = groupClass.split(':')[1]; // remove 'group-anim-[action]:'
 
   // Find elements in the same group
-  const elements = document.querySelectorAll(`[class*="anim-group:${groupId}"]`);
+  const elements = document.querySelectorAll(`[class*="group-anim:${groupId}"]`);
 
   elements.forEach((element) => {
     // Animate the element
@@ -40,8 +40,8 @@ function animateElement(element) {
 
   // Extract 'from' and 'to' classes
   classNames.forEach(name => {
-    if (name.startsWith('anim-from:')) fromClasses.push(name.slice(10)); // remove 'anim-from:'
-    if (name.startsWith('anim-to:')) toClasses.push(name.slice(8)); // remove 'anim-to:'
+    if (name.startsWith('from-anim:')) fromClasses.push(name.slice(10)); // remove 'from-anim:'
+    if (name.startsWith('to-anim:')) toClasses.push(name.slice(8)); // remove 'to-anim:'
   });
 
   // Toggle classes
