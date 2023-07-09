@@ -3,7 +3,6 @@
 ScriptyTUI is a package for making it simple turn the animated TailwindUI components you purchased into actual animations using Tailwind-like syntax.
 
 ## Navigate this README
-* [Quickstart](#quickstart)
 * [Installation](#installation)
 * [Usage](#usage)
 * [A more descriptive guide for usage](#scriptytui-class-overview)
