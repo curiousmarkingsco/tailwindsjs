@@ -64,7 +64,7 @@ STEP 3 to 7. Your component after adding ScriptyTUI classes:
 ## ScriptyTUI Class Overview
 
 #### Unique Identifiers
-To prevent unexpected visual bugs, you will need to make a unique, Unique identifier to keep your animations scoped to exactly the element you want animated.
+To prevent unexpected visual bugs, you will need to make a unique identifier to keep your animations scoped to exactly the element you want animated.
 
 When defining our identifier, it is considered best practice to wrap it in square brackets to maintain the visual indication of an arbitrary definition. That way, it is clear to any TailwindCSS developer that the identifier was an arbitrary hand-written value.
 
@@ -76,13 +76,13 @@ Example 1. `group-anim-click:[happy22]`
 
 `group-anim:` prefix indicates that our element is going to be animated and is part of a group that will be animated upon its triggering. See [Animation Actions](#animation-actions) for how to trigger the animation.
 
-Our hope is to match Tailwind's approach of triggering multiple animations/transitions on hover, for example, has the `group-` prefix to classes. For example, `group-hover:` See:
+Our hope is to match Tailwind's approach of triggering multiple animations. On Tailwind's hover, for example, it has the `group-` prefix to classes. For example, `group-hover:` See:
 [https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state](https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state)
 
 #### Animation Actions 
 ##### `group-anim-[action]:[unique-identifier]`
 
-With this class, we are telling our friend Scripty what type of interaction triggers the animation.
+With this class, we are telling our friend Scripty what type of interaction triggers the animation. Use this class only once per group and use it on the element that is going to trigger the animation based on user interaction.
 
 Currently supported triggers:
 1. click `group-anim-click:`
