@@ -1,4 +1,4 @@
-export default function scriptyTUI(){
+export default function TailwindSJS(){
   document.querySelectorAll('[class*="group-anim-click:"]').forEach((trigger) => {
     trigger.addEventListener('click', () => {
       handleAnimationGroup(trigger);
@@ -66,4 +66,4 @@ export default function scriptyTUI(){
   }
 }
 
-module.exports = scriptyTUI;
+module.exports = TailwindSJS;

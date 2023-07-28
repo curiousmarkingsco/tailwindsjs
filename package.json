@@ -1,8 +1,8 @@
 {
-  "name": "scriptytui",
-  "version": "1.1.0",
+  "name": "tailwindsjs",
+  "version": "1.0.0",
   "description": "An easy way to animate your TailwindUI elements.",
-  "main": "dist/scriptytui.js",
+  "main": "dist/tailwindsjs.js",
   "scripts": {
     "build": "webpack",
     "build:dev": "webpack --mode development",
@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "tailwindcss",
     "animation",
     "html",
     "interactive"

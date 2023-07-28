@@ -7,7 +7,7 @@ Update from July 17, 2023: Originally called Scripty TUI (TailwindUI), it has be
 ## Navigate this README
 * [Installation](#installation)
 * [Usage](#usage)
-* [A more descriptive guide for usage](#scriptytui-class-overview)
+* [A more descriptive guide for usage](#tailwindsjs-class-overview)
 * [Learn More](#justification)
 * [Caveats](#caveats)
 * [Contributing](#contributing)
@@ -16,14 +16,14 @@ Update from July 17, 2023: Originally called Scripty TUI (TailwindUI), it has be
 
 From the root of your Node project:
 ```bash
-npm install scriptytui
+npm install tailwindsjs
 ```
 
 Or simply copy/paste the contents of `src/vanilla_code.js` to wherever you deem necessary.
 
 ## Usage
 
-STEP 1. [Install](#installation) ScriptyTUI as a package **or** copy/paste `src/vanilla_code.js` into your files
+STEP 1. [Install](#installation) TailwindSJS as a package **or** copy/paste `src/vanilla_code.js` into your files
 
 STEP 2. Examine this example: Your example component that needs animation:
 ```html
@@ -35,7 +35,7 @@ STEP 2. Examine this example: Your example component that needs animation:
 </button>
 ```
 
-STEP 3 to 7. Your component after adding ScriptyTUI classes:
+STEP 3 to 7. Your component after adding TailwindSJS classes:
 ```html
 <!-- STEP 3. Add an identifier to your element.
              In this example, we call it '[unique]'
@@ -63,7 +63,7 @@ STEP 3 to 7. Your component after adding ScriptyTUI classes:
 </button>
 ```
 
-## ScriptyTUI Class Overview
+## TailwindSJS Class Overview
 
 #### Unique Identifiers
 To prevent unexpected visual bugs, you will need to make a unique identifier to keep your animations scoped to exactly the element you want animated.
@@ -84,7 +84,7 @@ Our hope is to match Tailwind's approach of triggering multiple animations. On T
 #### Animation Actions 
 ##### `group-anim-[action]:[unique-identifier]`
 
-With this class, we are telling our friend Scripty what type of interaction triggers the animation. Use this class only once per group and use it on the element that is going to trigger the animation based on user interaction.
+With this class, we are telling our Simple JavaScript what type of interaction triggers the animation. Use this class only once per group and use it on the element that is going to trigger the animation based on user interaction.
 
 Currently supported triggers:
 1. click `group-anim-click:`
@@ -111,7 +111,7 @@ from-anim:bg-gray-200 to-anim:bg-indigo-600
 
 ## Justification
 
-The folks at TailwindUI don't want to assume your JS implementation. If you're not super into using Vue or React, this package provides a vanilla JS implementation. Bundle it in your front-end, or simply copy/paste `src/index.js` or `dist/scriptytui.js` for a minimized version into your bespoke front-end.
+The folks at TailwindUI don't want to assume your JS implementation. If you're not super into using Vue or React, this package provides a vanilla JS implementation. Bundle it in your front-end, or simply copy/paste `src/index.js` or `dist/tailwindsjs.js` for a minimized version into your bespoke front-end.
 
 As a happy accident of solving this problem for myself, it turns out that any TailwindCSS user can benefit from simplifying a wide range JS-related animation needs from their TailwindCSS-powered HTML pages.
 
@@ -121,8 +121,8 @@ As a happy accident of solving this problem for myself, it turns out that any Ta
 ## Contributing
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ianrandmckenzie/scriptytui/issues)
-- Fix bugs and [submit pull requests](https://github.com/ianrandmckenzie/scriptytui/pulls)
+- [Report bugs](https://github.com/ianrandmckenzie/tailwindsjs/issues)
+- Fix bugs and [submit pull requests](https://github.com/ianrandmckenzie/tailwindsjs/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features, here's some examples:
   - Add animation support for form submission

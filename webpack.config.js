@@ -5,8 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scriptytui.js',
-    library: 'scriptytui',
+    filename: 'tailwindsjs.js',
+    library: 'tailwindsjs',
     libraryTarget: 'umd',
   },
 };
