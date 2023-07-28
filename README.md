@@ -1,8 +1,8 @@
-# TailwindCSS Simple Animation Tool aka scriptyTUI
+# TailwindSJS (Simple JavaScript)
 
-ScriptyTUI is a package for making it simple turn your TailwindCSS classes into animations based on user interaction. If you are a buyer of [TailwindUI components](https://tailwindui.com/), this is the perfect library to easily get those components animated without pidgeon-holing yourself into their React or Vue samples.
+TailwindSJS is a package for making it simple turn your TailwindCSS classes into animations based on user interaction. If you are a buyer of [TailwindUI components](https://tailwindui.com/), this is the perfect library to easily get those components animated without pidgeon-holing yourself into their React or Vue samples.
 
-Update from July 17, 2023: Originally called Scripty TUI (TailwindUI), it has become apparent you do not need to be a TailwindUI customer to get the full benefits of this software.
+Update from July 17, 2023: Originally called Scripty TUI (TailwindUI), it has become apparent you do not need to be a TailwindUI customer to get the full benefits of this software. On July 28, it was renamed to TailwindSJS to match the styling of `TailwindCSS` and my newer project `TailwindVPB`.
 
 ## Navigate this README
 * [Installation](#installation)
