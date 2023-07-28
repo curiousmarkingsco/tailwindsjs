@@ -1,0 +1,31 @@
+# Development and build artifacts
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+dist/
+build/
+
+# Version control
+.git/
+.gitignore
+.svn/
+
+# Documentation and tests
+docs/
+README.md
+test/
+tests/
+*.test.js
+
+# Configurations
+.npmrc
+.travis.yml
+.eslintrc
+.babelrc
+
+# Temporary and cache files
+.DS_Store
+Thumbs.db
+.cache/
+.npm/

@@ -16,10 +16,34 @@ document.querySelectorAll('[class*="group-anim-mouseout:"]').forEach((trigger) =
   });
 });
 
+document.querySelectorAll('[class*="group-anim-mouseenter:"]').forEach((trigger) => {
+  trigger.addEventListener('mouseenter', () => {
+    handleAnimationGroup(trigger);
+  });
+});
+
+document.querySelectorAll('[class*="group-anim-mouseleave:"]').forEach((trigger) => {
+  trigger.addEventListener('mouseleave', () => {
+    handleAnimationGroup(trigger);
+  });
+});
+
+document.querySelectorAll('[class*="group-anim-change:"]').forEach((trigger) => {
+  trigger.addEventListener('change', () => {
+    handleAnimationGroup(trigger);
+  });
+});
+
+document.querySelectorAll('[class*="group-anim-submit:"]').forEach((trigger) => {
+  trigger.addEventListener('submit', () => {
+    handleAnimationGroup(trigger);
+  });
+});
+
 function handleAnimationGroup(trigger) {
   const groupClass = trigger.className
     .split(' ')
-    .find(name => /group-anim-(click|mouseover|mouseout):/.test(name));
+    .find(name => /group-anim-(click|mouseover|mouseout|mouseenter|mouseleave|change|submit):/.test(name));
 
   const groupId = groupClass.split(':')[1]; // remove 'group-anim-[action]:'
 
@@ -35,7 +59,12 @@ function handleAnimationGroup(trigger) {
 }
 
 function animateElement(element) {
-  const classNames = element.className.split(' ');
+  let classNames = null;
+  if (element.tagName === 'svg'){
+    classNames = element.className.baseVal.split(' ');
+  } else {
+    classNames = element.className.split(' ');
+  }
   let fromClasses = [], toClasses = [];
 
   // Extract 'from' and 'to' classes

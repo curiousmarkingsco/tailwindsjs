@@ -4,47 +4,76 @@ export default function TailwindSJS(){
       handleAnimationGroup(trigger);
     });
   });
-
+  
   document.querySelectorAll('[class*="group-anim-mouseover:"]').forEach((trigger) => {
     trigger.addEventListener('mouseover', () => {
       handleAnimationGroup(trigger);
     });
   });
-
+  
   document.querySelectorAll('[class*="group-anim-mouseout:"]').forEach((trigger) => {
     trigger.addEventListener('mouseout', () => {
       handleAnimationGroup(trigger);
     });
   });
-
+  
+  document.querySelectorAll('[class*="group-anim-mouseenter:"]').forEach((trigger) => {
+    trigger.addEventListener('mouseenter', () => {
+      handleAnimationGroup(trigger);
+    });
+  });
+  
+  document.querySelectorAll('[class*="group-anim-mouseleave:"]').forEach((trigger) => {
+    trigger.addEventListener('mouseleave', () => {
+      handleAnimationGroup(trigger);
+    });
+  });
+  
+  document.querySelectorAll('[class*="group-anim-change:"]').forEach((trigger) => {
+    trigger.addEventListener('change', () => {
+      handleAnimationGroup(trigger);
+    });
+  });
+  
+  document.querySelectorAll('[class*="group-anim-submit:"]').forEach((trigger) => {
+    trigger.addEventListener('submit', () => {
+      handleAnimationGroup(trigger);
+    });
+  });
+  
   function handleAnimationGroup(trigger) {
     const groupClass = trigger.className
       .split(' ')
-      .find(name => /group-anim-(click|mouseover|mouseout):/.test(name));
-
+      .find(name => /group-anim-(click|mouseover|mouseout|mouseenter|mouseleave|change|submit):/.test(name));
+  
     const groupId = groupClass.split(':')[1]; // remove 'group-anim-[action]:'
-
+  
     // Find elements in the same group
     const elements = document.querySelectorAll(`[class*="group-anim:${groupId}"]`);
-
+  
     elements.forEach((element) => {
       // Animate the element
       animateElement(element);
-
+  
       updateAnimateFormElements(element);
     });
   }
-
+  
   function animateElement(element) {
-    const classNames = element.className.split(' ');
+    let classNames = null;
+    if (element.tagName === 'svg'){
+      classNames = element.className.baseVal.split(' ');
+    } else {
+      classNames = element.className.split(' ');
+    }
     let fromClasses = [], toClasses = [];
-
+  
     // Extract 'from' and 'to' classes
     classNames.forEach(name => {
       if (name.startsWith('from-anim:')) fromClasses.push(name.slice(10)); // remove 'from-anim:'
       if (name.startsWith('to-anim:')) toClasses.push(name.slice(8)); // remove 'to-anim:'
     });
-
+  
     // Toggle classes
     fromClasses.forEach((fromClass, index) => {
       if (element.classList.contains(fromClass)) {
@@ -56,7 +85,7 @@ export default function TailwindSJS(){
       }
     });
   }
-
+  
   function updateAnimateFormElements(element) {
     // Toggle 'aria-checked' attribute if role is 'switch'
     if (element.getAttribute('role') === 'switch') {
