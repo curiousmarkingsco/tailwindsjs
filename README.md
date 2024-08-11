@@ -1,8 +1,6 @@
 # TailwindSJS (Simple JavaScript)
 
-TailwindSJS is a package for making it simple turn your TailwindCSS classes into animations based on user interaction. If you are a buyer of [TailwindUI components](https://tailwindui.com/), this is the perfect library to easily get those components animated without pidgeon-holing yourself into their React or Vue samples.
-
-Update from July 17, 2023: Originally called Scripty TUI (TailwindUI), it has become apparent you do not need to be a TailwindUI customer to get the full benefits of this software. On July 28, it was renamed to TailwindSJS to match the styling of `TailwindCSS` and my newer project `TailwindVPB`.
+TailwindSJS is a package for making it simple turn your TailwindCSS classes into animations based on user interaction. If you are a buyer of [TailwindUI components](https://tailwindui.com/), this is the perfect library to easily get those components animated without pidgeon-holing yourself into their React or Vue samples. Otherwise, this is a way to use Tailwind-y syntax to add JS-powered animations.
 
 ## Navigate this README
 * [Installation](#installation)
@@ -113,7 +111,7 @@ from-anim:bg-gray-200 to-anim:bg-indigo-600
 
 The folks at TailwindUI don't want to assume your JS implementation. If you're not super into using Vue or React, this package provides a vanilla JS implementation. Bundle it in your front-end, or simply copy/paste `src/index.js` or `dist/tailwindsjs.js` for a minimized version into your bespoke front-end.
 
-As a happy accident of solving this problem for myself, it turns out that any TailwindCSS user can benefit from simplifying a wide range JS-related animation needs from their TailwindCSS-powered HTML pages.
+As a happy accident of solving this, it turns out that any TailwindCSS user can benefit from simplifying a wide range JS-related animation needs from their TailwindCSS-powered HTML pages.
 
 ## Caveat(s)
 * We don't assume your back-end. This is only for making animation implementation easier.
