@@ -121,8 +121,8 @@ As a happy accident of solving this problem for myself, it turns out that any Ta
 ## Contributing
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ianrandmckenzie/tailwindsjs/issues)
-- Fix bugs and [submit pull requests](https://github.com/ianrandmckenzie/tailwindsjs/pulls)
+- [Report bugs](https://github.com/curiousmarkingsco/tailwindsjs/issues)
+- Fix bugs and [submit pull requests](https://github.com/curiousmarkingsco/tailwindsjs/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features, here's some examples:
   - Add animation support for form submission
@@ -130,4 +130,4 @@ Everyone is encouraged to help improve this project. Here are a few ways you can
   - Add documentation for more complex examples
   - Add a test suite
 
-For security issues, send an email to the address on [this page](https://github.com/ianrandmckenzie).
+For security issues, send an email to the address on [this page](https://github.com/curiousmarkingsco).
