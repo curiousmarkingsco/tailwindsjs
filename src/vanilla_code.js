@@ -1,40 +1,40 @@
-document.querySelectorAll('[class*="group-anim-click:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-click/"]').forEach((trigger) => {
   trigger.addEventListener('click', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="group-anim-mouseover:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-mouseover/"]').forEach((trigger) => {
   trigger.addEventListener('mouseover', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="group-anim-mouseout:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-mouseout/"]').forEach((trigger) => {
   trigger.addEventListener('mouseout', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="group-anim-mouseenter:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-mouseenter/"]').forEach((trigger) => {
   trigger.addEventListener('mouseenter', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="group-anim-mouseleave:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-mouseleave/"]').forEach((trigger) => {
   trigger.addEventListener('mouseleave', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="group-anim-change:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-change/"]').forEach((trigger) => {
   trigger.addEventListener('change', () => {
     handleAnimationGroup(trigger);
   });
 });
 
-document.querySelectorAll('[class*="group-anim-submit:"]').forEach((trigger) => {
+document.querySelectorAll('[class*="group-anim-submit/"]').forEach((trigger) => {
   trigger.addEventListener('submit', () => {
     handleAnimationGroup(trigger);
   });
@@ -43,12 +43,12 @@ document.querySelectorAll('[class*="group-anim-submit:"]').forEach((trigger) => 
 function handleAnimationGroup(trigger) {
   const groupClass = trigger.className
     .split(' ')
-    .find(name => /group-anim-(click|mouseover|mouseout|mouseenter|mouseleave|change|submit):/.test(name));
+    .find(name => /group-anim-(click|mouseover|mouseout|mouseenter|mouseleave|change|submit)\//.test(name));
 
-  const groupId = groupClass.split(':')[1]; // remove 'group-anim-[action]:'
+  const groupId = groupClass.split('/')[1]; // remove 'group-anim-[action]:'
 
   // Find elements in the same group
-  const elements = document.querySelectorAll(`[class*="group-anim:${groupId}"]`);
+  const elements = document.querySelectorAll(`[class*="group-anim/${groupId}"]`);
 
   elements.forEach((element) => {
     // Animate the element
