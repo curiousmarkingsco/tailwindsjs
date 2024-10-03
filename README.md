@@ -37,11 +37,11 @@ STEP 3 to 7. Your component after adding TailwindSJS classes:
 ```html
 <!-- STEP 3. Add an identifier to your element.
              In this example, we call it '[unique]'
-             With the prefix we get 'group-anim:[unique]' -->
+             With the prefix we get 'group-anim/[unique]' -->
 
 <!-- STEP 4. Add the type of interaction that triggers the animation.
              In this example, we want to trigger from a click, so we
-             call it 'group-anim-click:[unique]'
+             call it 'group-anim-click/[unique]'
              The 'group-anim-click:' tells us we want to trigger from a
              click, and '[unique]' associates that click with the '[unique]'
              animation group. -->
@@ -52,12 +52,12 @@ STEP 3 to 7. Your component after adding TailwindSJS classes:
 
 <!-- STEP 6. Then we add what we animate to! Here, we take it to a brighter
              color, 'to-anim:bg-indigo-600' -->
-<button type="button" class="group-anim-click:[unique] group-anim:[unique] from-anim:bg-gray-200 to-anim:bg-indigo-600 bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false">
+<button type="button" class="group-anim-click/[unique] group-anim/[unique] from-anim:bg-gray-200 to-anim:bg-indigo-600 bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false">
   <span class="sr-only">Use setting</span>
   <!-- STEP 7. Finally, add any additional animations to applicable elements.
                Remember to identify them with your '[unique]' animation group,
                along with your from/to rules. -->
-  <span aria-hidden="true" class="group-anim:[unique] from-anim:translate-x-0 to-anim:translate-x-5 translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+  <span aria-hidden="true" class="group-anim/[unique] from-anim:translate-x-0 to-anim:translate-x-5 translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
 </button>
 ```
 
@@ -101,9 +101,9 @@ from-anim:bg-gray-200 to-anim:bg-indigo-600
 
 #### Completed Example
 ```html
-<button type="button" class="group-anim-click:[unique] group-anim:[unique] from-anim:bg-gray-200 to-anim:bg-indigo-600 bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false">
+<button type="button" class="group-anim-click/[unique] group-anim/[unique] from-anim:bg-gray-200 to-anim:bg-indigo-600 bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false">
   <span class="sr-only">Use setting</span>
-  <span aria-hidden="true" class="group-anim:[unique] from-anim:translate-x-0 to-anim:translate-x-5 translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+  <span aria-hidden="true" class="group-anim/[unique] from-anim:translate-x-0 to-anim:translate-x-5 translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
 </button>
 ```
 
