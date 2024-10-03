@@ -70,8 +70,8 @@ export default function TailwindSJS(){
   
     // Extract 'from' and 'to' classes
     classNames.forEach(name => {
-      if (name.startsWith('from-anim/')) fromClasses.push(name.slice(10)); // remove 'from-anim:'
-      if (name.startsWith('to-anim/')) toClasses.push(name.slice(8)); // remove 'to-anim:'
+      if (name.startsWith('from-anim:')) fromClasses.push(name.slice(10)); // remove 'from-anim:'
+      if (name.startsWith('to-anim:')) toClasses.push(name.slice(8)); // remove 'to-anim:'
     });
   
     // Toggle classes
